@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  * @author Keyto
- * @create 2017/8/5
+ * Created on 2017/8/5
  */
 @RestController
 public class PersonController {
@@ -23,7 +23,6 @@ public class PersonController {
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public List<Person> savePerson(@RequestBody Person person) {
         personRepository.save(person);
-        List<Person> people = personRepository.findAll(new PageRequest(0, 10)).getContent();
-        return people;
+        return personRepository.findAll(new PageRequest(0, 10)).getContent();
     }
 }

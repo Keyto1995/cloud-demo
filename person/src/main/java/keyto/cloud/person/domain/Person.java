@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 
 /**
  * @author Keyto
- * @create 2017/8/5
+ * Created on 2017/8/5
  */
 @Entity
 public class Person extends AbstractPersistable<Long> {
